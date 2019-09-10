@@ -67,6 +67,8 @@ router.post('/',
                   if (err) throw err;
                   res.json({ token });
               });
+
+        //    To be continued...
         } catch (error) {
             console.error(error.message);
             res.status(500).message('Internal Server Error!')
