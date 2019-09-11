@@ -9,15 +9,15 @@ connectDB();
 // Init Middleware (allows us to get req.body)
 app.use(express.json({
     extend: false
-}))
+}));
 
-app.get('/', (req, res) => res.send('Api is running...'))
+app.get('/', (req, res) => res.send('Api is running...'));
 
 // Define routes
-app.use('/api/users', require('./routes/api/users'))
-app.use('/api/auth', require('./routes/api/auth'))
-app.use('/api/profile', require('./routes/api/profile'))
-app.use('/api/posts', require('./routes/api/posts'))
+app.use('/api/users', require('./routes/api/users'));
+app.use('/api/auth', require('./routes/api/auth'));
+app.use('/api/profile', require('./routes/api/profile'));
+app.use('/api/posts', require('./routes/api/posts'));
 
 
 const PORT = process.env.PORT || 5000;
